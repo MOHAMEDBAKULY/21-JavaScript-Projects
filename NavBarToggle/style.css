@@ -1,0 +1,100 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Logo{
+    color: black;
+}
+
+.Toggle-button{ 
+    background: lightblue; 
+    border: 5px solidl lightcyan;
+    font-size: 24px;
+    padding: 4px;
+    height: 35px; 
+ }
+
+.links{
+    list-style-type: none;
+    display: flex;
+    gap: 8px;
+    font-size: 24px;
+}
+
+.links .link-items a{
+    color: rgb(35, 37, 37);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+}
+
+.social-icons{
+    display: flex;
+    gap: 16px;
+    margin-right:20px ;
+}
+
+.icons a{
+    color: rgb(252, 252, 252);
+
+}
+
+@media screen and  (min-width: 360px) {
+
+    nav{
+        width: 360px;
+        background-color: rgb(44, 248, 26);
+        position: relative;
+    }
+
+    .Logo{
+        font-size: 16px;
+    }
+    
+    .Toggle-button{
+       position: absolute;
+       right: 0px;
+       background-color: rgb(17, 183, 238); 
+       color: aqua;
+       /* border: 2px solid lightcyan; */
+       font-size: 20px;
+       padding: 4px;
+       height: 35px; 
+       
+    }
+
+    .links{
+        display: none;
+    }
+
+    .social-icons{
+        position: absolute;
+        left: 0px;
+    }
+}
+
+
+
+
+/* By defaults links are hidden */
+/* .links{
+    /* height: 0;
+    overflow: hidden;
+    transition: ; */
+/* } */ 
+
+.show-links{
+    height: 10rem;
+}

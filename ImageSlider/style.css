@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title h2{
+    font-size: 32px;
+}
+
+.underline{
+    font-size: 20px;
+    height: 20px;
+    background-color: aqua;
+}
+
+article{
+    width: 350px;
+    border-radius: 16px;
+    height: 300px;
+    margin: auto;
+    padding: 24px;
+    position: relative;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.review{
+    background-color: whitesmoke;
+    color: black;
+}
+
+img{
+    width: 70px;
+    height: 70px;
+    clip-path: circle();
+}
+
+#Author{
+    position: absolute;
+    top: 28px;
+    left:200px;
+}
+
+.job{
+    position: relative;
+    top:-48px;
+    left:200px;
+}
+
+.button-container{
+    margin-top: 30px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.left,.right{
+    padding: 8px;
+    margin: 5px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(15, 168, 168);
+}
+
+.random{
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  background-color: rgb(34, 124, 228);
+  width: 100px;
+  margin-left: 102px;
+  
+}
