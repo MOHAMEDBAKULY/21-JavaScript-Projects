@@ -2,10 +2,11 @@
 
 const toggleBtn = document.querySelector('.Toggle-button')
 const link = document.querySelector('.links')
+const Icons = document.querySelector('.icons')
 
 
 toggleBtn.addEventListener('click', () => {
-    link.classList.toggle('show-links')
+    Icons.classList.toggle('social-icons')
 })
 
 
