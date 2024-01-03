@@ -78,9 +78,30 @@ const menu = [
         description: `Lorem ipsum dolor, sit am
         adipisicing elit. Itaque architecto 
         quidem quae expedita, cumque officia!`
+    },
+    {
+        id:9,
+        title: "Milk shake",
+        category: "Shakes",
+        price: 230,
+        img: "./code.png",
+        description: `Lorem ipsum dolor, sit am
+        adipisicing elit. Itaque architecto 
+        quidem quae expedita, cumque officia!`
+    },
+    {
+        id:10,
+        title: "Kahawa",
+        category: "Shakes",
+        price: 510,
+        img: "./code.png",
+        description: `Lorem ipsum dolor, sit am
+        adipisicing elit. Itaque architecto 
+        quidem quae expedita, cumque officia!`
     }
 ]
 
+// Get all Elements from the DOM
 const SectionCenter = document.querySelector('.section-center');
 const fitlterBtn = document.querySelectorAll('.filter-btn');
 const btnConatiner = document.querySelector('.btn-container')
@@ -89,7 +110,32 @@ const btnConatiner = document.querySelector('.btn-container')
 window.addEventListener('DOMContentLoaded', () => {
    displayMenuItems(menu)
    
+//    const categories = menu.map((item) => {
+//        return item.category
+//     })
+//     console.log(categories)
+
+
+   const categories = menu.reduce((curr, acc) => {
+     if(!curr.includes(acc.category)){
+        curr.push(acc.category)
+     }
+    return curr;
+   },
+   ['all']
+);
+
+
+   const categoryBtns = categories.map((category) => {
+       return ` <!-- <button 
+        type="button"
+        class="filter-btn" data-id="${category}">
+        ${category}
+        </button> --> `
+   }).join('');
+   btnConatiner.innerHTML = categoryBtns;
 });
+
 
 
 const displayMenuItems = (menuItems) => {
